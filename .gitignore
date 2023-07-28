@@ -1,3 +1,4 @@
 .vs/
 CMakePresets.json
 out/
+test/

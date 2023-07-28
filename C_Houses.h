@@ -6,6 +6,7 @@
 #define _API_ __declspec(dllexport)
 
 #include "SDL.h"
+#include "SDL_image.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -21,12 +22,12 @@ extern "C" {
 	/// <br>
 	/// The returned color is in RGB hex format.
 	/// </summary>
-	_API_ Uint32 CH_GetSurfacePixelColor(SDL_Surface* surface, int x, int y);
+	_API_ void CH_GetSurfacePixelColor(SDL_Surface* surface, int x, int y, Uint8* r, Uint8* g, Uint8* b);
 
 	/// <summary>
 	/// Overwrites the pixel at a specified position within an SDL_Surface.
 	/// </summary>
-	_API_ void CH_SetSurfacePixelColor(SDL_Surface* surface, int x, int y, Uint32 color);
+	_API_ void CH_SetSurfacePixelColor(SDL_Surface* surface, int x, int y, Uint8 r, Uint8 g, Uint8 b);
 
 #ifdef __cplusplus
 }
